@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Watsapp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Watsapp</h1>
+    </header>
+    <button class="link" onclick="openpage('Chats','this','red')">Chats</button>
+    <button class="link" onclick="openpage('Image','this','green')">Image</button>
+    <button class="link" onclick="openpage('Contacts','this','blue')">Contacts</button>
+    <button class="link" onclick="openpage('Settings','this','yellow')">Settings</button>
+    <div id="Chats" class="tab">
+        <h3>Chats</h3>
+        <p>Some Text Type Your Contacts In Friends</p>
+    </div>
+    <div id="Image" class="tab">
+        <h3>Image</h3>
+        <img src="img/photo-1542394731-170c9e6d914e.jpg">
+        <img src="img/photo-1524293568345-75d62c3664f7.jpg">
+        <img src="img/photo-1533514114760-4389f572ae26.jpg">
+        <img src="img/smiley-1041796_1920-800x450.jpg">
+    </div>
+    <div id="Contacts" class="tab">
+        <h3>Contacts</h3>
+        <p>Hari</p>
+        <p>Subash</p>
+        <p>Surya</p>
+    </div>
+    <div id="Settings" class="tab">
+        <h3>Settings</h3>
+        <p>Account</p>
+        <p>Help</p>
+        <p>Notifications</p>
+    </div>
+    <script>
+        function openpage(pageName, elmnt, color) {
+            var i, tab, link;
+            tab = document.getElementsByClassName("tab");
+            for (i = 0; i < tab.length; i++) {
+                tab[i].style.display = "none";
+            }
+            link = document.getElementsByClassName("link");
+            for (i = 0; i < link.length; i++) {
+                link[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+
+</html>
